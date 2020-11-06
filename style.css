@@ -1,0 +1,23 @@
+/*
+Theme Name: CRMN
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: CRMN original theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: CRMN
+*/
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  color: #04287e;
+}
+
+.error404 .custom-logo-link img {
+  filter: none;
+}

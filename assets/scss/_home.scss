@@ -1,0 +1,9 @@
+@import "_variables";
+
+.home {
+}
+
+@include mq(mobile) {
+  .home {
+  }
+}
