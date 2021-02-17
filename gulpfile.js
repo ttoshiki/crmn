@@ -2,6 +2,8 @@
 const gulp = require("gulp");
 // Sassをコンパイルするプラグインの読み込み
 const sass = require("gulp-sass");
+const cleanCSS = require("gulp-clean-css");
+const rename   = require("gulp-rename");
 const packageImporter = require('node-sass-package-importer');
 
 // style.scssの監視タスクを作成する
@@ -27,7 +29,14 @@ gulp.task("default", function () {
                     )
                     // cssフォルダー以下に保存
                     .pipe(gulp.dest("./"))
+                    .pipe(cleanCSS())
+                    .pipe(rename({
+                        extname: '.min.css'
+                    }))
+                    .pipe(gulp.dest('./'))
             );
         }
     );
+    gulp.task("default", function() {
+    });
 });
