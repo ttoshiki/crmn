@@ -11,4 +11,5 @@ gsap.timeline({
     defaults: { duration: 0 }})
     .to(".mainAnimation__logoFirst", { delay: 1.6, 'color': '#ffffff' })
     .to(".mainAnimation__logoSecondWrapper", { display: 'block' })
+    .to(".mainAnimation__cover.-second", { delay: 2.4, display: 'none' })
 
