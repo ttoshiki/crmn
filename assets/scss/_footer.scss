@@ -1,4 +1,22 @@
 @import "_variables";
 
 .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 48px;
+
+  &__address {
+    margin-top: 48px;
+    font-size: 13px;
+  }
+
+  &__copyright {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+  }
+
+  &__privacyLink {
+    color: $black;
+  }
 }

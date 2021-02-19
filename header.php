@@ -33,4 +33,10 @@
 				wp_nav_menu(array('theme_location' => 'primary'));
       ?>
 		</nav>
+		<?php if(function_exists('bcn_display')) ?>
+		<div class="header__breadcrumbs">
+			<?php {
+				bcn_display();
+			} ?>
+		</div>
 	</header>

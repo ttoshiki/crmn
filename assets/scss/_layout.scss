@@ -1,4 +1,33 @@
 @import "_variables";
+.l-pagination {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.page-numbers {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 15px;
+  color: $black;
+
+  &:not(:first-child) {
+    margin-left: 8px;
+  }
+
+  &.current {
+    color: $white;
+    background-color: $black;
+  }
+
+  &.next,
+  &.prev {
+    width: auto;
+    color: $black;
+  }
+}
 
 @include mq(mobile) {
 }

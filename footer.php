@@ -38,17 +38,17 @@
 		</div>
 	<?php endif; ?>
 	<div class="contactButton">
-		<a href="<?php echo home_url('/contact/') ?>">CONTACT</a>
+		<a href="<?php echo home_url('/contact/') ?>" class="contactLink">CONTACT</a>
 	</div>
 	<footer class="footer">
 		<div class="footer__main">
 			<!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_dark.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/logo_dark.png, <?php echo get_template_directory_uri(); ?>/assets/img/logo_dark@2x.png 2x" alt="" class="footer__logo"> -->
 			<span>CROMAGNON.inc</span>
-			<address>〒810-0022 福岡県hogefuga</address>
-			<span>Copyright CROMAGNON&Co. All rights reserved</span>
+			<address class="footer__address">〒810-0022 福岡県hogefuga</address>
+			<span class="footer__copyright">Copyright CROMAGNON&Co. All rights reserved</span>
 		</div>
 		<div class="footer__sub">
-			<a href="<?php echo home_url('/privacy/'); ?>">PRIVACY POLICY</a>
+			<a href="<?php echo home_url('/privacy/'); ?>" class="footer__privacyLink">PRIVACY POLICY</a>
 		</div>
 	</footer>
 </div><!-- #page -->

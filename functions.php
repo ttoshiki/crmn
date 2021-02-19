@@ -202,8 +202,8 @@ function official_pagination()
         'base' => str_replace($big, '%#%', get_pagenum_link($big)),
         'format' => '?paged=%#%',
         'current' => max(1, get_query_var('paged')),
-        'prev_text' => __('<'),
-        'next_text' => __('>'),
+        'prev_text' => __('PREV'),
+        'next_text' => __('NEXT'),
         'mid_size' => 2,
         'total' => $wp_query->max_num_pages
     ));
@@ -244,3 +244,23 @@ function wpcf7_validate_email_filter_confrim($result, $tag)
     }
     return $result;
 }
+
+// パンくずリスト
+function my_static_breadcrumb_adder($breadcrumb_trail)
+{
+    if (is_archive()) {
+        $item = new bcn_breadcrumb('NEWS', null, array('post'));
+        $stuck = array_pop($breadcrumb_trail->breadcrumbs); // HOME 一時退避
+        $breadcrumb_trail->breadcrumbs[] = $item; //NEWS 追加
+        $breadcrumb_trail->breadcrumbs[] = $stuck; //HOME 戻す
+    }
+
+    if (is_single()) {
+        $item = new bcn_breadcrumb('NEWS', null, array('post'), '/news/', null, true);
+        $stuck = array_pop($breadcrumb_trail->breadcrumbs); // HOME 一時退避
+        $breadcrumb_trail->breadcrumbs[] = $item; //NEWS 追加
+        $breadcrumb_trail->breadcrumbs[] = $stuck; //HOME 戻す
+    }
+}
+add_action('bcn_after_fill', 'my_static_breadcrumb_adder');
+

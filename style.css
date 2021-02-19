@@ -57,6 +57,10 @@ textarea {
   appearance: none;
 }
 
+address {
+  font-style: normal;
+}
+
 .roboto {
   font-family: "Roboto", sans-serif;
 }
@@ -154,6 +158,23 @@ textarea {
   font-size: 16px;
 }
 
+.contactButton {
+  padding: 48px 0;
+  background-color: #000000;
+}
+
+.contactLink {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  padding: 24px;
+  margin: 0 auto;
+  font-size: 48px;
+  font-weight: 500;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
 .form-block {
   display: flex;
   align-items: center;
@@ -236,6 +257,93 @@ textarea {
   display: flex;
 }
 
+.l-pagination {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.page-numbers {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 15px;
+  color: #000000;
+}
+
+.page-numbers:not(:first-child) {
+  margin-left: 8px;
+}
+
+.page-numbers.current {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.page-numbers.next, .page-numbers.prev {
+  width: auto;
+  color: #000000;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.header__nav .menu {
+  display: flex;
+  margin: 0;
+  font-size: 17px;
+}
+
+.header__nav .menu .menu-item {
+  margin: 0 12px;
+}
+
+.header__nav .menu a {
+  font-weight: 600;
+  color: #000000;
+  transition: opacity 0.2s;
+}
+
+.header__nav .menu a:hover {
+  opacity: 0.5;
+}
+
+.header__breadcrumbs {
+  padding: 16px 24px;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+.header__breadcrumbs a {
+  color: #000000;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 48px;
+}
+
+.footer__address {
+  margin-top: 48px;
+  font-size: 13px;
+}
+
+.footer__copyright {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.footer__privacyLink {
+  color: #000000;
+}
+
 .not-found {
   display: flex;
   flex-direction: column;
@@ -247,4 +355,44 @@ textarea {
 
 .error404 .custom-logo-link img {
   filter: none;
+}
+
+.archive__main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.archive__item {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #000000;
+}
+
+.archive__item:not(:first-child) {
+  margin-top: 24px;
+}
+
+.archive__meta {
+  display: flex;
+  align-items: center;
+}
+
+.archive__cat {
+  margin-left: 24px;
+  background-color: #000000;
+}
+
+.archive__cat a {
+  display: inline-block;
+  min-width: 96px;
+  padding: 0 4px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.archive__title {
+  margin: 0 0 0 32px;
+}
+
+.archive__title a {
+  color: #000000;
 }
