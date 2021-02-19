@@ -60,5 +60,87 @@
   }
 }
 
+.form-block {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  padding: 24px 0;
+  margin: 0 auto;
+  border-bottom: 1px solid #ccc;
+
+  &.-doubleRow {
+    display: block;
+  }
+
+  &.-textarea {
+    align-items: flex-start;
+
+    .form-label,
+    .form-required-label {
+      margin-top: 12px;
+    }
+  }
+}
+
+.form-doubleRow {
+  display: flex;
+  align-items: center;
+}
+
+.form-label {
+  width: 24%;
+}
+
+.form-required-label {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 4px 12px;
+  margin-right: 24px;
+  font-size: 14px;
+  color: $white;
+  white-space: nowrap;
+  background-color: $black;
+}
+
+.form-labelWrapper {
+  display: flex;
+  width: 24%;
+
+  .form-label {
+    width: 100%;
+  }
+}
+
+.wpcf7-form-control {
+  width: 100%;
+  height: 100%;
+  padding: 12px 0;
+}
+
+.wpcf7-form-control-wrap {
+  flex-grow: 1;
+}
+
+.form-mailInput {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.your-email_confirm {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.form-mail-confirm {
+  width: 69.5%;
+}
+
+.form-submitArea {
+  display: flex;
+}
+
 @include mq(mobile) {
 }
