@@ -1,0 +1,21 @@
+@import "_variables";
+
+.contact {
+  &__privacy {
+    width: 70%;
+    max-width: 960px;
+    height: 300px;
+    padding: 24px 48px;
+    margin: 48px auto 0;
+    overflow-y: auto;
+    box-shadow: 2px 2px 16px #ccc;
+  }
+
+  &__privacyHeading {
+    text-align: center;
+  }
+
+  &__privacySubHeading {
+    text-align: center;
+  }
+}

@@ -164,6 +164,7 @@ function crmn_scripts()
     if (is_front_page()) {
         wp_enqueue_script('gsap-scripts', get_stylesheet_directory_uri() . '/assets/js/lib/gsap.min.js', array(), '', true);
         wp_enqueue_script('main-animation-scripts', get_stylesheet_directory_uri() . '/assets/js/main-animation.js', array(), '', true);
+        wp_enqueue_script('home-scripts', get_stylesheet_directory_uri() . '/assets/js/home.js', array(), '', false);
     }
 
 }
@@ -248,14 +249,16 @@ function wpcf7_validate_email_filter_confrim($result, $tag)
 // パンくずリスト
 function my_static_breadcrumb_adder($breadcrumb_trail)
 {
-    if (is_archive()) {
+    // アーカイブページはNEWSのリンクなし
+    if (is_archive() && !is_post_type_archive('works')) {
         $item = new bcn_breadcrumb('NEWS', null, array('post'));
         $stuck = array_pop($breadcrumb_trail->breadcrumbs); // HOME 一時退避
         $breadcrumb_trail->breadcrumbs[] = $item; //NEWS 追加
         $breadcrumb_trail->breadcrumbs[] = $stuck; //HOME 戻す
     }
 
-    if (is_single()) {
+    // 記事ページはNEWSのリンクあり
+    if (is_single() && !is_singular('works')) {
         $item = new bcn_breadcrumb('NEWS', null, array('post'), '/news/', null, true);
         $stuck = array_pop($breadcrumb_trail->breadcrumbs); // HOME 一時退避
         $breadcrumb_trail->breadcrumbs[] = $item; //NEWS 追加
@@ -263,4 +266,3 @@ function my_static_breadcrumb_adder($breadcrumb_trail)
     }
 }
 add_action('bcn_after_fill', 'my_static_breadcrumb_adder');
-

@@ -1,40 +1,39 @@
 
-	<?php if ((!is_front_page()) && (!is_page('works'))): ?>
+	<?php if ((!is_front_page()) && (!is_post_type_archive('works'))): ?>
 		<div class="moreWorks">
-			<ul class="moreWorks__list">
-				<li class="moreWorks__item">
-					<img src="" alt="">
-					<div class="moreWorks__Text">
-						<h3 class="moreWorks__heading">事例タイトル</h3>
-						<p class="moreWorks__catch">事例キャッチコピーが入ります。</p>
-						<a href="" class="moreWorks__link">SEE MORE</a>
-					</div>
+			<h2 class="moreWorks__heading">MORE WORKS.</h2>
+			<ul class="works__list">
+			<?php
+				$args = array( 'post_type' => 'works' );  // カスタム投稿タイプ Products
+				$the_query = new WP_Query($args); if ($the_query->have_posts()):
+			?>
+			<?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+				<li class="works__item">
+					<article id="post-<?php the_ID(); ?>" <?php post_class('works__article'); ?>>
+						<?php
+							if (has_post_thumbnail()) { // 投稿にアイキャッチ画像が割り当てられているかチェックします。
+								the_post_thumbnail();
+							}
+						?>
+						<div class="works__meta">
+							<h3 class="works__title"><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
+							<?php $catch_copy = get_field('catch_copy');?>
+								<?php if($catch_copy) { ?>
+									<h4 class="works__catchCopy">
+										<?php echo $catch_copy; ?>
+									</h4>
+								<?php } ?>
+								<div class="works__moreLinkWrapper">
+									<a href="<?php the_permalink(); ?>" class="works__moreLink">SEE MORE</a>
+								</div>
+						</div>
+					</article>
 				</li>
-				<li class="moreWorks__item">
-					<img src="" alt="">
-					<div class="moreWorks__Text">
-						<h3 class="moreWorks__heading">事例タイトル</h3>
-						<p class="moreWorks__catch">事例キャッチコピーが入ります。</p>
-						<a href="" class="moreWorks__link">SEE MORE</a>
-					</div>
-				</li>
-				<li class="moreWorks__item">
-					<img src="" alt="">
-					<div class="moreWorks__Text">
-						<h3 class="moreWorks__heading">事例タイトル</h3>
-						<p class="moreWorks__catch">事例キャッチコピーが入ります。</p>
-						<a href="" class="moreWorks__link">SEE MORE</a>
-					</div>
-				</li>
-				<li class="moreWorks__item">
-					<img src="" alt="">
-					<div class="moreWorks__Text">
-						<h3 class="moreWorks__heading">事例タイトル</h3>
-						<p class="moreWorks__catch">事例キャッチコピーが入ります。</p>
-						<a href="" class="moreWorks__link">SEE MORE</a>
-					</div>
-				</li>
-			</ul>
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+			<?php else: ?>
+			<!-- 投稿が無い場合の処理 -->
+			<?php endif; ?>
 		</div>
 	<?php endif; ?>
 	<div class="contactButton">
