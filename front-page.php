@@ -4,7 +4,49 @@
 		<?php get_template_part('template-parts/mainAnimation') ?>
 		<div class="home__wrapper">
 			<section class="home__works">
-				<h2 class="subHeading">WORKS.</h2>
+				<div class="home__worksHeader">
+					<h2 class="subHeading">WORKS.</h2>
+					<a href="<?php echo home_url('/works/') ?>" class="home__SeeAllLink">SEE ALL</a>
+				</div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<?php $args = array(
+								'posts_per_page'   => 5,
+								'post_type' => 'works',
+								'meta_key' => 'is_show_home_slider',
+							);
+							$my_query = new WP_Query($args);
+							$num = 1;
+							if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+						?>
+						<div class="swiper-slide">
+							<?php if (has_post_thumbnail()) { the_post_thumbnail('large'); } ?>
+							<div class="home__worksMeta">
+								<h3 class="works__title">
+									<a href="<?php the_permalink(); ?>">
+										<span>#<?php echo sprintf('%02d', $num) ?></span>
+										<?php echo get_the_title(); ?>
+									</a>
+								</h3>
+								<?php $catch_copy = get_field('catch_copy');?>
+								<?php if ($catch_copy) { ?>
+									<h4 class="works__catchCopy">
+										<?php echo $catch_copy; ?>
+									</h4>
+								<?php } ?>
+								<div class="works__moreLinkWrapper">
+									<a href="<?php the_permalink(); ?>" class="works__moreLink">SEE MORE</a>
+								</div>
+							</div>
+							<?php $num += 1; ?>
+						</div>
+						<?php endwhile; endif; wp_reset_postdata(); ?>
+					</div>
+				</div>
+				<div class="home__sliderButtons">
+					<div class="home__sliderButton -prev">PREV</div>
+					<div class="home__sliderButton -next">NEXT</div>
+				</div>
 			</section>
 			<section class="home__about">
 				<h2 class="subHeading">ABOUT US.</h2>

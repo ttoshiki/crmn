@@ -503,8 +503,57 @@ address {
   margin-top: 78vh;
 }
 
+.home__works {
+  position: relative;
+  width: 90%;
+  margin: 0 0 80px auto;
+}
+
+.home__worksHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home .swiper-container {
+  height: 300px;
+}
+
+.home .swiper-slide {
+  position: relative;
+}
+
+.home .swiper-slide .wp-post-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.home__sliderButtons {
+  position: absolute;
+  bottom: -8%;
+  left: 0;
+  z-index: 100;
+  display: flex;
+}
+
+.home__sliderButton.-next {
+  margin-left: 24px;
+}
+
+.home__sliderButton:hover {
+  cursor: pointer;
+}
+
+.home__worksMeta {
+  position: absolute;
+  right: 0;
+  bottom: -8%;
+  padding: 24px 48px 24px 24px;
+  background-color: #ffffff;
+}
+
 .home__serviceList {
   display: flex;
+  width: 80%;
 }
 
 .home__serviceItem {

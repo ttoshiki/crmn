@@ -1,5 +1,16 @@
 'use strict';
 
+// スライダー
+window.onload = function() {
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: '.home__sliderButton.-next',
+      prevEl: '.home__sliderButton.-prev',
+    },
+  });
+}
+
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 35.68106198, lng: 139.76689403 },
@@ -16,6 +27,8 @@ function initMap() {
   });
 }
 
+
+// モーダル
 jQuery(function(){
     jQuery('.js-modal-open').each(function(){
         jQuery(this).on('click',function(){

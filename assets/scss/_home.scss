@@ -5,8 +5,59 @@
     margin-top: 78vh;
   }
 
+  &__works {
+    position: relative;
+    width: 90%;
+    margin: 0 0 80px auto;
+  }
+
+  &__worksHeader {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .swiper-container {
+    height: 300px;
+  }
+
+  .swiper-slide {
+    position: relative;
+
+    .wp-post-image {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__sliderButtons {
+    position: absolute;
+    bottom: -8%;
+    left: 0;
+    z-index: 100;
+    display: flex;
+  }
+
+  &__sliderButton {
+    &.-next {
+      margin-left: 24px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__worksMeta {
+    position: absolute;
+    right: 0;
+    bottom: -8%;
+    padding: 24px 48px 24px 24px;
+    background-color: $white;
+  }
+
   &__serviceList {
     display: flex;
+    width: 80%;
   }
 
   &__serviceItem {

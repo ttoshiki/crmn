@@ -20,7 +20,7 @@ get_header();
 							<li class="works__item">
 								<article id="post-<?php the_ID(); ?>" <?php post_class('works__article'); ?>>
                   <?php
-                    if (has_post_thumbnail()) { // 投稿にアイキャッチ画像が割り当てられているかチェックします。
+                    if (has_post_thumbnail()) {
                       the_post_thumbnail();
                     }
                   ?>
