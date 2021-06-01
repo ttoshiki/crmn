@@ -1,6 +1,6 @@
-@import "_variables";
+@use "_variables";
 
-.archive {
+.p-archive {
   &__main {
     width: 80%;
     margin: 0 auto;
@@ -8,7 +8,7 @@
 
   &__item {
     padding-bottom: 24px;
-    border-bottom: 1px solid $black;
+    border-bottom: 1px solid variables.$black;
 
     &:not(:first-child) {
       margin-top: 24px;
@@ -22,13 +22,13 @@
 
   &__cat {
     margin-left: 24px;
-    background-color: $black;
+    background-color: variables.$black;
 
     a {
       display: inline-block;
       min-width: 96px;
       padding: 0 4px;
-      color: $white;
+      color: variables.$white;
       text-align: center;
     }
   }
@@ -37,7 +37,7 @@
     margin: 0 0 0 32px;
 
     a {
-      color: $black;
+      color: variables.$black;
     }
   }
 }

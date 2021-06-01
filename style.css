@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: CROMAGNON
 Theme URI: http://underscores.me/
@@ -93,6 +94,10 @@ address {
   }
 }
 
+.verdana {
+  font-family: Verdana, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
 .mainAnimation {
   position: absolute;
   top: 0;
@@ -151,6 +156,42 @@ address {
 
 .mainAnimation__catchCopy {
   font-size: 16px;
+}
+
+.mainAnimation__scrolldown {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  right: 4%;
+  bottom: 100px;
+  width: 10px;
+}
+
+.mainAnimation__scrolldown::after {
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: 30px;
+  content: "";
+  background: #000000;
+  opacity: 0;
+  animation: pathmove 1.6s ease-in-out infinite;
+}
+
+@keyframes pathmove {
+  0% {
+    top: 64px;
+    height: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 40px;
+    opacity: 1;
+  }
+  100% {
+    top: 128px;
+    height: 0;
+    opacity: 0;
+  }
 }
 
 .subHeading {

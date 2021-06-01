@@ -1,0 +1,18 @@
+@use "variables";
+
+.c-contactButton {
+  padding: 48px 0;
+  background-color: variables.$black;
+}
+
+.c-contactLink {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  padding: 24px;
+  margin: 0 auto;
+  font-size: 48px;
+  font-weight: variables.$font-weight-bd;
+  color: variables.$white;
+  border: 1px solid variables.$white;
+}

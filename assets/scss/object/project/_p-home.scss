@@ -1,0 +1,159 @@
+@use "_variables";
+
+.p-home {
+  &-wrapper {
+    margin-top: 78vh;
+  }
+
+  &-works {
+    position: relative;
+    width: 90%;
+    margin: 0 0 80px auto;
+  }
+
+  &-worksHeader {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .swiper-container {
+    height: 300px;
+  }
+
+  .swiper-slide {
+    position: relative;
+
+    .wp-post-image {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-sliderButtons {
+    position: absolute;
+    bottom: -8%;
+    left: 0;
+    z-index: 100;
+    display: flex;
+  }
+
+  &-sliderButton {
+    &.-next {
+      margin-left: 24px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &-worksMeta {
+    position: absolute;
+    right: 0;
+    bottom: -8%;
+    padding: 24px 48px 24px 24px;
+    background-color: variables.$white;
+  }
+
+  &-service {
+    &__list {
+      display: flex;
+      width: 80%;
+    }
+
+    &__item {
+      position: relative;
+
+      &:not(:first-child) {
+        margin-left: 32px;
+      }
+    }
+
+    &__itemHeading {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      margin: 0;
+      color: variables.$white;
+    }
+
+    &__link {
+      position: absolute;
+      right: -8px;
+      bottom: -8px;
+      padding: 8px 24px;
+      background-color: variables.$white;
+      box-shadow: 1px 1px 16px #ccc;
+    }
+
+    &__linkSpan {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        display: inline-block;
+        width: 40px;
+        height: 1px;
+        margin-right: 12px;
+        content: "";
+        background-color: variables.$black;
+      }
+    }
+  }
+
+  &-news {
+    .archive__list {
+      width: 80%;
+      margin: 0 0 0 auto;
+    }
+
+    &__header {
+      display: flex;
+    }
+  }
+
+  &-member {
+    &__catchcopy {
+      position: absolute;
+      top: 48px;
+      left: 24px;
+      color: variables.$white;
+    }
+
+    &__catchcopyImage {
+      height: 240px;
+      filter: brightness(0.1);
+      object-fit: cover;
+    }
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      position: relative;
+      flex: 1;
+
+      &.-catchcopy {
+        flex: 3;
+      }
+    }
+
+    &__image {
+      object-fit: cover;
+    }
+
+    &__text {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  &-map {
+    height: 320px;
+  }
+
+  #map {
+    height: 100%;
+  }
+}

@@ -10,15 +10,8 @@ License URI: LICENSE
 Text Domain: CROMAGNON
 */
 
-@import "_variables";
-@import "_base";
-@import "_module";
-@import "_layout";
-@import "_header";
-@import "_footer";
-@import "_404";
-@import "home";
-@import "contact";
-@import "archive";
-@import "archive-works";
-@import "single";
+@use "_variables";
+@use "foundation/base";
+@use "_module";
+@use "_layout";
+@use "_object";

@@ -1,0 +1,64 @@
+@use "_variables";
+
+.p-works {
+  &__article {
+    position: relative;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 48px;
+    width: 88%;
+    margin: 0 auto;
+    margin-bottom: 64px;
+
+    img {
+      width: 90%;
+      height: 40%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__meta {
+    position: absolute;
+    right: 10%;
+    bottom: -8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    min-height: 160px;
+    padding: 24px 0 24px 24px;
+    background-color: variables.$white;
+  }
+
+  &__catchCopy {
+    margin-bottom: 0;
+  }
+
+  &__moreLinkWrapper {
+    margin: 12px 0 0;
+    text-align: right;
+  }
+
+  &__moreLink {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 51%;
+      left: -60px;
+      display: inline-block;
+      width: 48px;
+      height: 1px;
+      content: "";
+      background-color: variables.$black;
+      transform: translateY(-50%);
+    }
+  }
+}

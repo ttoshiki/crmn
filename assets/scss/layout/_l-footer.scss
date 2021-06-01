@@ -1,6 +1,6 @@
-@import "_variables";
+@use "variables";
 
-.footer {
+.l-footer {
   display: flex;
   justify-content: space-between;
   padding: 24px 48px;
@@ -17,6 +17,6 @@
   }
 
   &__privacyLink {
-    color: $black;
+    color: variables.$black;
   }
 }

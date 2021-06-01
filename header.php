@@ -9,16 +9,16 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<header id="header" class="header">
-		<div class="header__hammenu -sp">
+	<header id="l-header" class="l-header">
+		<div class="l-header__hammenu -sp">
 			<?php the_custom_logo(); ?>
-			<span class="header__trigger" href="#" @click="toggleMenu" id="trigger">
+			<span class="l-header__trigger" href="#" @click="toggleMenu" id="trigger">
 				<span></span>
 				<span></span>
 				<span></span>
 			</span>
-			<div class="header__hammenuWrapper">
-				<div class="header__hammenuInner">
+			<div class="l-header__hammenuWrapper">
+				<div class="l-header__hammenuInner">
 					<?php
 						wp_nav_menu(array(
 								'theme_location' => 'primary'
@@ -27,14 +27,14 @@
 				</div>
 			</div>
 		</div>
-		<nav class="header__nav -pc">
+		<nav class="l-header__nav -pc">
 			<?php the_custom_logo(); ?>
 			<?php
 				wp_nav_menu(array('theme_location' => 'primary'));
       ?>
 		</nav>
 		<?php if(function_exists('bcn_display')) ?>
-		<div class="header__breadcrumbs">
+		<div class="l-header__breadcrumbs">
 			<?php {
 				bcn_display();
 			} ?>

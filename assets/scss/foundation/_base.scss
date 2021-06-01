@@ -1,3 +1,5 @@
+@use "_variables";
+
 *,
 *::after,
 *::before {
@@ -25,7 +27,7 @@ ol {
 }
 
 a {
-  color: $black;
+  color: variables.$black;
   text-decoration: none;
 }
 
@@ -53,10 +55,6 @@ address {
   font-style: normal;
 }
 
-.roboto {
-  font-family: "Roboto", sans-serif;
-}
-
 .screen-reader-text {
   display: none;
 }
@@ -65,24 +63,8 @@ address {
   display: none;
 }
 
-@include mq(mobile) {
-  .-pc {
-    display: none;
-  }
-
-  .-sp {
-    display: block;
-  }
-
-  .site-main {
-    min-width: auto;
-  }
-
-  select,
-  input[type="text"],
-  input[type="tel"],
-  input[type="email"],
-  textarea {
-    font-size: 16px;
+@mixin mq($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
   }
 }

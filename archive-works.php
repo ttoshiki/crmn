@@ -15,25 +15,25 @@ get_header();
 			<h1 class="archive-works__heading"> WORKS.</h1>
 			<div class="archive-works__main">
 					<?php if (have_posts()): ?>
-						<ul class="works__list">
+						<ul class="p-works__list">
 							<?php while (have_posts()) : the_post(); ?>
-							<li class="works__item">
-								<article id="post-<?php the_ID(); ?>" <?php post_class('works__article'); ?>>
+							<li class="p-works__item">
+								<article id="post-<?php the_ID(); ?>" <?php post_class('p-works__article'); ?>>
                   <?php
                     if (has_post_thumbnail()) {
                       the_post_thumbnail();
                     }
                   ?>
-									<div class="works__meta">
-										<h3 class="works__title"><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
+									<div class="p-works__meta">
+										<h3 class="p-works__title"><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
                     <?php $catch_copy = get_field('catch_copy');?>
                       <?php if($catch_copy) { ?>
-                        <h4 class="works__catchCopy">
+                        <h4 class="p-works__catchCopy">
                           <?php echo $catch_copy; ?>
                         </h4>
                       <?php } ?>
-                      <div class="works__moreLinkWrapper">
-                        <a href="<?php the_permalink(); ?>" class="works__moreLink">SEE MORE</a>
+                      <div class="p-works__moreLinkWrapper">
+                        <a href="<?php the_permalink(); ?>" class="p-works__moreLink">SEE MORE</a>
                       </div>
 									</div>
 								</article>
