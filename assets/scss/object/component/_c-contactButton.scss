@@ -3,16 +3,45 @@
 .c-contactButton {
   padding: 48px 0;
   background-color: variables.$black;
+
+  &__inner {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: -10.5%;
+      width: 21%;
+      height: 1px;
+      content: "";
+      background-color: variables.$white;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      position: absolute;
+      top: 46.3%;
+      left: 10%;
+      width: 2px;
+      height: 6px;
+      content: "";
+      background-color: variables.$white;
+      transform: skewX(45deg);
+    }
+  }
+
+  &__label {
+    max-width: 240px;
+  }
 }
 
 .c-contactLink {
   display: flex;
+  align-items: center;
   justify-content: center;
-  width: 80%;
-  padding: 24px;
-  margin: 0 auto;
-  font-size: 48px;
-  font-weight: variables.$font-weight-bd;
-  color: variables.$white;
+  height: 150px;
   border: 1px solid variables.$white;
 }

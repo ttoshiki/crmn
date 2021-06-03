@@ -5,8 +5,8 @@ window.onload = function() {
   const swiper = new Swiper('.swiper-container', {
     loop: true,
     navigation: {
-      nextEl: '.p-home__sliderButton.-next',
-      prevEl: '.p-home__sliderButton.-prev',
+      nextEl: '.p-home-slider__button.-next',
+      prevEl: '.p-home-slider__button.-prev',
     },
   });
 }

@@ -154,8 +154,8 @@ function crmn_scripts()
     wp_register_style('normalize', get_template_directory_uri() . '/assets/css/lib/normalize.css', array(), '1.0', 'all');
     wp_enqueue_style('normalize');
 
-    wp_register_style('roboto', 'https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap', array(), '1.0', 'all');
-    wp_enqueue_style('roboto');
+    wp_register_style('notosansjp', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap', array(), '1.0', 'all');
+    wp_enqueue_style('notosansjp');
 
     wp_enqueue_script('jquery');
 
