@@ -256,7 +256,7 @@
 			<section class="p-home-map">
 				<div id="map"></div>
 				<script
-					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsk6Izz5aDyGxCeqExkUYJkolIKV5LpwE&map_ids=db75605afda0c7cd&callback=initMap">
+					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCViDorf7Sq8IbYJbBAonu5tLbdrBPwWAE">
 					async
 				</script>
 				<a href="#" class="p-home-map__link u-verdana">Google Map</a>

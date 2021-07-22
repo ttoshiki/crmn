@@ -1,5 +1,8 @@
 'use strict';
 
+import Swiper from 'swiper/bundle';
+import 'swiper/swiper-bundle.css';
+
 // スライダー
 window.onload = function() {
   const swiper = new Swiper('.swiper-container', {

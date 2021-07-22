@@ -1,5 +1,7 @@
 'use strict';
 
+import { gsap } from "gsap";
+
 gsap.timeline({ defaults: { duration: 0.6 }})
   .to(".p-mainAnimation__cover.-first", { delay: 0.4, duration: 1, y: -220, 'z-index': 10 })
   .to(".p-mainAnimation__logoFirst", { duration: 0, 'z-index': 100 })
