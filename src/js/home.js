@@ -1,7 +1,6 @@
-'use strict';
-
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
+import { Loader } from "@googlemaps/js-api-loader"
 
 // スライダー
 window.onload = function() {
@@ -14,8 +13,14 @@ window.onload = function() {
   });
 }
 
-function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
+// Google Map
+const loader = new Loader({
+  apiKey: "AIzaSyCViDorf7Sq8IbYJbBAonu5tLbdrBPwWAE",
+  version: "weekly",
+});
+
+loader.load().then(() => {
+  let map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 35.68106198, lng: 139.76689403 },
     zoom: 12,
     mapId: 'db75605afda0c7cd',
@@ -28,8 +33,7 @@ function initMap() {
     map,
     icon: image,
   });
-}
-
+});
 
 // モーダル
 jQuery(function(){

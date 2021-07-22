@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ttoshiki/web_template#readme",
   "devDependencies": {
+    "@googlemaps/js-api-loader": "^1.12.1",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^5.2.6",
     "fibers": "^5.0.0",
@@ -40,5 +41,9 @@
     "swiper": "^6.7.5",
     "webpack": "^5.42.1",
     "webpack-cli": "^4.7.2"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not IE <= 11"
+  ]
 }

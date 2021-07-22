@@ -44,17 +44,16 @@
 		</div>
 	</div>
 	<footer class="l-footer">
-		<div class="l-footer__main">
-			<!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_dark.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/logo_dark.png, <?php echo get_template_directory_uri(); ?>/assets/img/logo_dark@2x.png 2x" alt="" class="l-footer__logo"> -->
-			<span>CROMAGNON.inc</span>
-			<address class="l-footer__address u-notosansJp">〒810-0022　福岡県福岡市中央区薬院1丁目16−17イビサビル4F</address>
-			<span class="l-footer__copyright">Copyright CROMAGNON&Co. All rights reserved</span>
-		</div>
-		<div class="l-footer__sub">
+		<div class="l-footer__links">
+			<div class="l-footer__logo"><?php echo file_get_contents(get_template_directory_uri() . '/dist/images/logo.svg'); ?></div>
 			<a href="<?php echo home_url('/privacy/'); ?>" class="l-footer__privacyLink">
 				<img src="<?php echo get_template_directory_uri(); ?>/dist/images/privacy_policy.png" class="l-footer__privacyText">
 			</a>
-		</div>
+	</div>
+	<div class="l-footer__bottom">
+		<address class="l-footer__address u-notosansJp">〒810-0022　福岡県福岡市中央区薬院1丁目16−17イビサビル4F</address>
+		<span class="l-footer__copyright">Copyright CROMAGNON&Co. All rights reserved</span>
+	</div>
 	</footer>
 </div><!-- #page -->
 

@@ -255,10 +255,6 @@
 			</section>
 			<section class="p-home-map">
 				<div id="map"></div>
-				<script
-					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCViDorf7Sq8IbYJbBAonu5tLbdrBPwWAE">
-					async
-				</script>
 				<a href="#" class="p-home-map__link u-verdana">Google Map</a>
 			</section>
 		</div>
