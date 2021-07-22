@@ -1,0 +1,24 @@
+@use "_variables";
+
+.subHeading {
+  margin: 0;
+}
+
+.content {
+  padding: 40px;
+  margin: 0 auto;
+}
+
+.moreWorks {
+  margin: 100px auto 0;
+}
+
+.sr-only:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

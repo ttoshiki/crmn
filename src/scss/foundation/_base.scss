@@ -1,0 +1,70 @@
+@use "_variables";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic",
+    Verdana, Meiryo, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  color: variables.$black;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+select,
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  resize: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+.-sp {
+  display: none;
+}
+
+@mixin mq($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}

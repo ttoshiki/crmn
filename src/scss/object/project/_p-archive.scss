@@ -1,0 +1,43 @@
+@use "_variables";
+
+.p-archive {
+  &__main {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__item {
+    padding-bottom: 24px;
+    border-bottom: 1px solid variables.$black;
+
+    &:not(:first-child) {
+      margin-top: 24px;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+  }
+
+  &__cat {
+    margin-left: 24px;
+    background-color: variables.$black;
+
+    a {
+      display: inline-block;
+      min-width: 96px;
+      padding: 0 4px;
+      color: variables.$white;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin: 0 0 0 32px;
+
+    a {
+      color: variables.$black;
+    }
+  }
+}

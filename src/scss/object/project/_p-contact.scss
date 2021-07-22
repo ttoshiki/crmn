@@ -1,0 +1,119 @@
+@use "_variables";
+
+.p-contact {
+  &__privacy {
+    width: 70%;
+    max-width: 960px;
+    height: 300px;
+    padding: 24px 48px;
+    margin: 48px auto 0;
+    overflow-y: auto;
+    box-shadow: 2px 2px 16px #ccc;
+  }
+
+  &__privacyHeading {
+    text-align: center;
+  }
+
+  &__privacySubHeading {
+    text-align: center;
+  }
+}
+
+.form-block {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  padding: 24px 0;
+  margin: 0 auto;
+
+  &:not(:first-of-type) {
+    border-top: 1px solid #ccc;
+  }
+
+  &.-doubleRow {
+    display: block;
+  }
+
+  &.-textarea {
+    align-items: flex-start;
+
+    .form-label,
+    .form-required-label {
+      margin-top: 12px;
+    }
+  }
+}
+
+.form-doubleRow {
+  display: flex;
+  align-items: center;
+}
+
+.form-label {
+  width: 24%;
+}
+
+.form-required-label {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 4px 12px;
+  margin-right: 24px;
+  font-size: 14px;
+  color: variables.$white;
+  white-space: nowrap;
+  background-color: variables.$black;
+}
+
+.form-labelWrapper {
+  display: flex;
+  width: 24%;
+
+  .form-label {
+    width: 100%;
+  }
+}
+
+.wpcf7-form-control {
+  width: 100%;
+  height: 100%;
+  padding: 12px 0;
+}
+
+.wpcf7-submit {
+  width: 40%;
+  max-width: 200px;
+  padding: 18px 0;
+  color: variables.$white;
+  text-indent: 16px;
+  letter-spacing: 16px;
+  background-color: variables.$black;
+  border: none;
+}
+
+.wpcf7-form-control-wrap {
+  flex-grow: 1;
+}
+
+.form-mailInput {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.your-email_confirm {
+  width: calc(76% - 76px);
+  margin: 16px 0 0 auto;
+}
+
+.form-submitArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px auto 0;
+}
+
+.form-submitParagraph {
+  margin: 0 24px 0 0;
+}

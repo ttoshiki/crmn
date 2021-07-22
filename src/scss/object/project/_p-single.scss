@@ -1,0 +1,31 @@
+@use "_variables";
+
+.p-single {
+  &__main {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__article {
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    padding-bottom: 24px;
+    margin-top: 16px;
+    border-bottom: 1px solid variables.$black;
+  }
+
+  &__meta {
+    margin: 16px 0 0;
+    border-bottom: 1px solid variables.$black;
+
+    p {
+      margin-bottom: 32px;
+
+      &:last-of-type {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

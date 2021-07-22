@@ -1,0 +1,40 @@
+@use "variables";
+
+.l-header {
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+
+    .menu {
+      display: flex;
+      margin: 0;
+      font-size: 17px;
+
+      .menu-item {
+        margin: 0 12px;
+      }
+
+      a {
+        font-weight: 600;
+        color: variables.$black;
+        transition: opacity 0.2s;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  &__breadcrumbs {
+    padding: 16px 24px;
+    border-top: 1px solid variables.$black;
+    border-bottom: 1px solid variables.$black;
+
+    a {
+      color: variables.$black;
+    }
+  }
+}
